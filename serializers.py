@@ -12,4 +12,4 @@ class AgentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Agent
-        fields = ('id', 'name',  'contacts', 'agency', 'sales','experience','activity', 'region', 'region_id')
+        fields = ('id', 'name',  'phone', 'agency', 'sales','experience','activity', 'region', 'region_id')

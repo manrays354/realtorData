@@ -11,7 +11,7 @@ class ExcelImportForm(forms.Form):  # Corrected class name
 
 class AgentAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone', 'agency', 'sales', 'experience', 'region')
-    change_list_template = "entities/import_agents.html"
+    change_list_template = "Templetes/import_agents.html"
     actions = ["import_excel"]
 
     def get_urls(self):
@@ -46,6 +46,7 @@ class AgentAdmin(admin.ModelAdmin):
             form = ExcelImportForm()  # Corrected form class name
             payload = {"form": form}
             return render(request, "admin/excel_form.html", payload)
+        
 
 admin.site.register(Agent, AgentAdmin)
 admin.site.register(Region)
